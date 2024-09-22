@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Modelo</title>
+</head>
+<body>
+  <section class="container">
+    <h1>Tabela IMC</h1>
+    <p class="intro">
+      O Índice de Massa Corporal (IMC) é uma das principais ferramentas, 
+      adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o 
+      chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC
+      também aponta níveis de magreza e obesidade, que são usados para nortear o 
+      trabalho de profissionais de saúde e de educadores físicos.
+    </p>
+
+    <section class="tabelaIMC">
+      <div class="indiceIMC">
+        <h2>IMC</h2>
+        <p>Menos do que 18,5</p>
+        <p>Entre do que 18,5 e 24,9</p>
+        <p>Entre do que 25 e 29,9</p>
+        <p>Entre do que 30 e 34,9</p>
+        <p>Entre do que 35 e 39,9</p>
+        <p>Mais do que 40</p>
+      </div>
+      <div class="resultadoIMC">
+        <h2>Resultado</h2>
+        <p>Abaixo do peso</p>
+        <p>Peso normal</p>
+        <p>Sobrepeso</p>
+        <p>Obesidade Grau 1</p>
+        <p>Obesidade Grau 2</p>
+        <p>Obesidade Grau 3</p>
+      </div>
+    </section>
+    
+    <form action="" method="get" class="form">
+      <label id="nome" for="inputNome">Nome:</label>
+      <input name="nome" type="text" class="inputNome" id="inputNome" placeholder="Informe seu Nome">
+      <label id="sobrenome" for="inputSobrenome">Sobrenome:</label>
+      <input name="sobrenome" type="text" class="inputSobrenome" id="inputSobrenome" placeholder="Informe o seu Sobrenome"></input>
+      <label id="peso" for="inputPeso">Peso:</label>
+      <input name="peso" type="number" class="inputPeso" id="inputPeso" placeholder="Informe seu peso">
+      <label id="altura" for="inputAltura">Altura:</label>
+      <input name="altura" type="text" class="inputAltura" id="inputAltura" placeholder="Informe sua altura em centímetros">
+      <input type="submit" value="Enviar" class="btn">
+    </form>
+
+    <div class="resultado">
+
+    </div>
+  </section>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
