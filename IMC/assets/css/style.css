@@ -72,6 +72,28 @@ div > p.msgErro {
   color: red;
 }
 
+footer {
+  margin: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+footer > p {
+  color: white;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: cadetblue;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   p {
