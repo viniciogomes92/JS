@@ -18,11 +18,16 @@ function calculaIMC (){
     const pessoaIMC = ({
       nome: nome.value,
       sobrenome: sobrenome.value,
-      peso: parseFloat(peso.value),
-      altura: parseFloat(altura.value) / 100
+      peso: Number(peso.value),
+      altura: Number(altura.value)
     });
     
-    const imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);
+    if (!pessoaIMC.altura) {
+      resultado.innerHTML = `<p class="msgErro">Por favor, preencha todos os campos corretamente.</p>`;
+      return;
+    } else {
+      const imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);
+    }
 
 
     if (imc.toFixed(1) < 18.5){
