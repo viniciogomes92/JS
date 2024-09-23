@@ -11,7 +11,7 @@ function calculaIMC (){
     const altura = form.querySelector('.inputAltura');
 
     if (!nome.value || !sobrenome.value || !peso.value || !altura.value){
-      resultado.innerHTML = `<p>Por favor, preencha todos os campos corretamente.</p>`;
+      resultado.innerHTML = `<p class="msgErro">Por favor, preencha todos os campos corretamente.</p>`;
       return;
     }
 

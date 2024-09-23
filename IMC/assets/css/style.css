@@ -68,7 +68,7 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-div > p.erro {
+div > p.msgErro {
   color: red;
 }
 
