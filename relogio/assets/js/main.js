@@ -101,19 +101,21 @@ function callDataHora(){
     }
 
     function hora(){
-      const hora = zeroAEsquerda(data.getHours());
-      const min = zeroAEsquerda(data.getMinutes());
-      const sec = zeroAEsquerda(data.getSeconds());
-      const horaCompleta = `${hora}:${min}:${sec}`
-      return(horaCompleta);
+      const horaHTML = document.querySelector('.hora');
+      const horaAtual = new Date();
+      const hora = zeroAEsquerda(horaAtual.getHours());
+      const min = zeroAEsquerda(horaAtual.getMinutes());
+      const sec = zeroAEsquerda(horaAtual.getSeconds());
+      horaHTML.innerHTML = `<strong>Horário de Brasília (GMT-3):</strong> ${hora}:${min}:${sec}`
+      console.log(`${hora}:${min}:${sec}`);
     }
 
     const dataCompleta = dataAbreviada();
 
-    horaWeb.innerHTML = `<p><strong>${diaDaSemana()}</strong>, ${dataCompleta.dia} de <strong>${mesExtenso()}</strong> de ${dataCompleta.ano} às ${hora()}</p>`;
-    setTimeout(function() {
-      window.location.reload(1);
-    }, 1000);
+    horaWeb.innerHTML = `<p><strong>${diaDaSemana()}</strong>, ${dataCompleta.dia} de <strong>${mesExtenso()}</strong> de ${dataCompleta.ano}</p>`;
+    setInterval(hora, 1000); // Atualiza a cada segundo
+    hora(); // Chama a função hora para exibir o tempo atual imediatamente
+
   }
   
   horaWeb.addEventListener("load", sendDataHora());
