@@ -21,14 +21,22 @@ function calculaIMC (){
       peso: Number(peso.value),
       altura: Number(altura.value)
     });
-    
-    if (!pessoaIMC.altura) {
+
+    let imc;
+
+    if (!pessoaIMC.altura === true) {
       resultado.innerHTML = `<p class="msgErro">Por favor, preencha todos os campos corretamente.</p>`;
       return;
+    } else if (Number.isInteger(pessoaIMC.altura) === true){
+      pessoaIMC.altura = pessoaIMC.altura / 100;
+      imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);
     } else {
-      const imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);
+      imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);  
     }
-
+    
+    console.log(pessoaIMC.altura);
+    console.log(imc);
+    //const imc = pessoaIMC.peso / (pessoaIMC.altura * pessoaIMC.altura);
 
     if (imc.toFixed(1) < 18.5){
       resultado.innerHTML = `<p>${pessoaIMC.nome} ${pessoaIMC.sobrenome}, seu IMC é ${imc.toFixed(1)} e, portanto, você está abaixo do peso.</p>`;
