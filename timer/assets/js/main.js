@@ -1,5 +1,5 @@
-
-/* Essa função a data ZERO do ES6 que é 00:00:00, formata ela pro formato desejado
+function relogio(){
+  /* Essa função a data ZERO do ES6 que é 00:00:00, formata ela pro formato desejado
 e a retorna para manipularmos */
 function getTimeFromSeconds (segundos){
   const data = new Date(segundos * 1000);
@@ -11,9 +11,6 @@ function getTimeFromSeconds (segundos){
 
 //Aqui puxamos os elementos HTML que iremos manipular para os objetos de mesmo nome
 const relogio = document.querySelector('.relogio');
-const iniciar = document.querySelector('.iniciar');
-const pausar = document.querySelector('.pausar');
-const zerar = document.querySelector('.zerar');
 
 //Aqui iniciamos as variáveis que iremos utilizar no decorrer do programa
 relogio.innerHTML = '00:00:00'
@@ -59,3 +56,5 @@ document.addEventListener('click', function(e){
     relogio.classList.remove('pausado');
   }
 })
+}
+relogio();
